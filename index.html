@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Chinnama ❤️</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    background:#3b2a1f;
+    overflow:hidden;
+    font-family: 'Georgia', serif;
+}
+
+/* Background glowing */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:radial-gradient(circle,#6b4b35 0%, #2b1b12 100%);
+    z-index:-2;
+}
+
+/* Floating hearts */
+
+.heart{
+    position:fixed;
+    color:#ff4d6d;
+    font-size:20px;
+    animation:float 6s linear infinite;
+    z-index:-1;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-10vh);
+        opacity:0;
+    }
+}
+
+/* Open button */
+
+.openBtn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:#8b0000;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Vintage paper */
+
+.paper{
+    display:none;
+    width:85%;
+    max-width:900px;
+    margin:40px auto;
+    padding:50px;
+    background:#e8cf9e;
+    color:#3e2723;
+    line-height:1.9;
+    font-size:24px;
+    position:relative;
+
+    border-radius:10px;
+
+    /* Burned edges */
+    box-shadow:
+    inset 0 0 40px rgba(0,0,0,0.5),
+    inset 0 0 100px rgba(80,40,0,0.6),
+    0 0 40px rgba(0,0,0,0.7);
+
+    animation:fadeIn 2s ease;
+}
+
+/* Burn marks */
+
+.paper::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:10px;
+
+    background:
+    radial-gradient(circle at top left, rgba(0,0,0,0.5), transparent 20%),
+    radial-gradient(circle at top right, rgba(0,0,0,0.5), transparent 20%),
+    radial-gradient(circle at bottom left, rgba(0,0,0,0.5), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(0,0,0,0.5), transparent 20%);
+
+    pointer-events:none;
+}
+
+/* Kannada quote */
+
+.quote{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:40px;
+    color:#5d4037;
+    font-weight:bold;
+}
+
+/* Heading */
+
+h1{
+    color:#7b1113;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* Final line */
+
+.final{
+    text-align:right;
+    margin-top:40px;
+    font-size:28px;
+    color:#7b1113;
+    font-weight:bold;
+}
+
+/* Fade animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="openBtn" onclick="openLetter()">
+Open Your Letter ❤️
+</button>
+
+<div class="paper" id="paper">
+
+<div class="quote">
+ಜೀವನ ಸಾಗಿಸಲು ಶ್ರೀಮಂತಿಕೆ ಬೇಕಂತಿಲ್ಲ,<br>
+ಭಾವನೆಗಳಿಗೆ ಬೆಲೆ ಕೊಡುವವರು ಇದ್ದರೆ ಸಾಕು. ❤️🤍
+</div>
+
+<h1>My Chinnama ❤️</h1>
+
+<div id="text"></div>
+
+<div class="final">
+Forever Yours,<br>
+Nandu ❤️
+</div>
+
+</div>
+
+<!-- MUSIC -->
+
+<audio id="music" autoplay loop>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+/* Floating hearts */
+
+setInterval(() => {
+
+let heart = document.createElement("div");
+
+heart.className = "heart";
+
+heart.innerHTML = "❤️";
+
+heart.style.left = Math.random()*100 + "vw";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},300);
+
+
+/* Letter text */
+
+let message = `I don’t know how to put everything I feel into words…
+but today, I just want to say this…
+
+I still remember that day… 19th,
+when you came home to see me…
+At that moment, I never thought
+you would become this important in my life…
+
+But today… everything feels different ❤️
+
+You are not just someone I met…
+You are my favorite person…
+my comfort… my peace… my everything 🤍
+
+The way you love me…
+The way you care for me…
+The way you understand me without even asking…
+it makes me feel so safe… so complete…
+
+Chinnama…
+I never want to lose you…
+Not today… not ever… ❤️
+
+In your happy times… I’ll be there with you…
+In your tough times… I’ll stand even closer to you…
+
+Every day… every minute… every second…
+I just want to be with you…
+
+Now when our parents are looking for our wedding date…
+it feels so real… so special… 💍
+
+And one thing I promise you…
+
+No matter what happens…
+No matter how life changes…
+
+I will never leave your side…
+
+Because now I know…
+You are not just part of my life…
+You are my whole life ❤️
+
+Stay with me… forever…
+
+Hand in hand…
+You and me… till the end…
+
+Unplanned love…
+Unexpected bond…
+Right time… Right person…
+
+That’s You ❤️`;
+
+
+/* Open letter */
+
+function openLetter(){
+
+document.querySelector(".openBtn").style.display="none";
+
+document.getElementById("paper").style.display="block";
+
+document.getElementById("music").play();
+
+let i=0;
+
+function typing(){
+
+if(i < message.length){
+
+document.getElementById("text").innerHTML += message.charAt(i);
+
+i++;
+
+setTimeout(typing,35);
+
+}
+
+}
+
+typing();
+
+}
+
+</script>
+
+</body>
+</html>
