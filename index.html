@@ -13,10 +13,10 @@ body{
     padding:0;
     background:#3b2a1f;
     overflow:hidden;
-    font-family: 'Georgia', serif;
+    font-family:'Georgia', serif;
 }
 
-/* Background glowing */
+/* Background */
 
 body::before{
     content:"";
@@ -78,10 +78,10 @@ body::before{
     line-height:1.9;
     font-size:24px;
     position:relative;
-
     border-radius:10px;
 
-    /* Burned edges */
+    /* Burned effect */
+
     box-shadow:
     inset 0 0 40px rgba(0,0,0,0.5),
     inset 0 0 100px rgba(80,40,0,0.6),
@@ -125,7 +125,7 @@ h1{
     margin-bottom:40px;
 }
 
-/* Final line */
+/* Final text */
 
 .final{
     text-align:right;
@@ -135,7 +135,7 @@ h1{
     font-weight:bold;
 }
 
-/* Fade animation */
+/* Fade */
 
 @keyframes fadeIn{
     from{
@@ -161,7 +161,7 @@ Open Your Letter ❤️
 
 <div class="quote">
 ಜೀವನ ಸಾಗಿಸಲು ಶ್ರೀಮಂತಿಕೆ ಬೇಕಂತಿಲ್ಲ,<br>
-ಭಾವನೆಗಳಿಗೆ ಬೆಲೆ ಕೊಡುವವರು ಇದ್ದರೆ ಸಾಕು. ❤️🤍
+ಭಾವನೆಗಳಿಗೆ ಬೆಲೆ ಕೊಡುವವರು ಇದ್ದರೆ ಸಾಕು. 🤍
 </div>
 
 <h1>My Chinnama ❤️</h1>
@@ -175,15 +175,13 @@ Nandu ❤️
 
 </div>
 
-<!-- MUSIC -->
+<!-- 7 SONG PLAYER -->
 
-<audio id="music" autoplay loop>
-<source src="song.mp3" type="audio/mpeg">
-</audio>
+<audio id="music"></audio>
 
 <script>
 
-/* Floating hearts */
+/* Floating Hearts */
 
 setInterval(() => {
 
@@ -204,9 +202,10 @@ heart.remove();
 },300);
 
 
-/* Letter text */
+/* LETTER */
 
-let message = `I don’t know how to put everything I feel into words…
+let message = `Its About Destiny❤️
+I don’t know how to put everything I feel into words…
 but today, I just want to say this…
 
 I still remember that day… 19th,
@@ -261,7 +260,47 @@ Right time… Right person…
 That’s You ❤️`;
 
 
-/* Open letter */
+/* 7 MPEG SONGS */
+
+let songs = [
+"song1.mpeg",
+"song2.mpeg",
+"song3.mpeg",
+"song4.mpeg",
+"song5.mpeg",
+"song6.mpeg",
+"song7.mpeg"
+];
+
+let currentSong = 0;
+
+let music = document.getElementById("music");
+
+
+function playMusic(){
+
+music.src = songs[currentSong];
+
+music.play();
+
+music.onended = function(){
+
+currentSong++;
+
+if(currentSong >= songs.length){
+currentSong = 0;
+}
+
+music.src = songs[currentSong];
+
+music.play();
+
+};
+
+}
+
+
+/* OPEN LETTER */
 
 function openLetter(){
 
@@ -269,9 +308,13 @@ document.querySelector(".openBtn").style.display="none";
 
 document.getElementById("paper").style.display="block";
 
-document.getElementById("music").play();
+/* Start music */
 
-let i=0;
+playMusic();
+
+/* Typing effect */
+
+let i = 0;
 
 function typing(){
 
